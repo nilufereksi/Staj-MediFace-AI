@@ -4,7 +4,7 @@
 
 <img width="800" height="429" alt="ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/4ca345da-ca59-4c22-ace4-e5e4f485e328" />
 
-
+NOT: Proje ticari amaçlarla kullanılabileceğinden kodlar eklenmedi, asıl kodları private repo da tutuldu.
 ---
 
 ## 🚀 Özellikler
@@ -93,6 +93,6 @@ mediface-ai/
 
 ## 📄 Lisans
 
-GNU 03 License — ayrıntılar için `LICENSE` dosyasına bakın.
+MIT License — ayrıntılar için `LICENSE` dosyasına bakın.
 
-NOT: Proje ticari amaçlarla kullanılabileceğinden kodlar eklenmedi, asıl kodları private repo da tutuldu.
+
