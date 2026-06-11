@@ -1,16 +1,23 @@
 # MediFace AI
 
-> MediaPipe tabanlı yüz landmark tespiti, AU koordinatı kaydı ve mesh görselleştirmesi sunan, gizlilik odaklı gerçek zamanlı yüz analizi kontrol paneli.
-
+> MediaPipe tabanlı yüz landmark tespiti, duygu & ağrı analizi, AU koordinatı kaydı ve mesh görselleştirmesi sunan, gizlilik odaklı gerçek zamanlı yüz analizi platformu.
+> 
 <img width="800" height="429" alt="ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/4ca345da-ca59-4c22-ace4-e5e4f485e328" />
 
 NOT: Proje ticari amaçlarla kullanılabileceğinden kodlar eklenmedi, asıl kodları private repo da tutuldu.
+---
+
+<img width="1919" height="1031" alt="resim" src="https://github.com/user-attachments/assets/bf0bbd03-b5fb-4d99-af6a-d667db973488" />
+
+<img width="1141" height="679" alt="resim" src="https://github.com/user-attachments/assets/d3004ec3-91ad-4d67-8498-58d217dc84f0" />
+
 ---
 
 ## 🚀 Özellikler
 
 | Mod | Açıklama |
 |-----|----------|
+| **Web Dashboard** | Flask + SocketIO tabanlı gerçek zamanlı duygu & ağrı analizi arayüzü |
 | **Data Logger** | Kamera veya videodan Action Unit (AU) koordinatlarını CSV olarak kaydeder |
 | **Yüz Mesh** | 468 noktalı MediaPipe yüz mesh'ini canlı olarak görselleştirir |
 | **Video Monitor** | Gerçek zamanlı çoklu yüz tespiti ve takibi |
@@ -21,32 +28,15 @@ NOT: Proje ticari amaçlarla kullanılabileceğinden kodlar eklenmedi, asıl kod
 
 Kamera görüntüleri **asla diske yazılmaz.** Yalnızca sayısal landmark koordinatları (CSV) saklanır.
 
----
-
-## 🛠️ Kurulum
-
-```bash
-# 1. Depoyu klonla
-git clone https://github.com/kullanici-adin/mediface-ai.git
-cd mediface-ai
-
-# 2. Bağımlılıkları yükle
-pip install -r requirements.txt
-
-# 3. Model dosyalarını indir ve models/ klasörüne koy
-#    face_landmarker.task  → https://developers.google.com/mediapipe/solutions/vision/face_landmarker
-#    blaze_face_short_range.tflite (Yüz Filtre modu için)
-
-# 4. Uygulamayı başlat
-python main_gui.py
-```
-
 ## 📦 Gereksinimler
 
 - Python 3.9+
-- `opencv-python >= 4.8.0`
+- `opencv-python-headless >= 4.8.0`
 - `mediapipe >= 0.10.0`
-- `Pillow` (GUI kamera görüntüsü için)
+- `tensorflow >= 2.13.0`
+- `numpy >= 1.24.0`
+- `flask >= 3.0.0`
+- `flask-socketio >= 5.3.0`
 
 ---
 
@@ -86,7 +76,6 @@ mediface-ai/
 └── .github/
     └── workflows/
         └── deploy.yml              # CI/CD pipeline
-```
 ```
 
 ---
