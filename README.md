@@ -54,16 +54,39 @@ python main_gui.py
 
 ```
 mediface-ai/
-├── main_gui.py          # Ana kontrol paneli (Tkinter GUI)
-├── data_logger.py       # AU koordinatı kayıt motoru
-├── mesh.py              # Yüz mesh çizim araçları
-├── yuz_tespit_video.py  # Video izleme modülü
-├── yuz_tespiti_image.py # Görüntü tabanlı tespit
-├── yuz_filtre.py        # Veri seti ön-işleme
-├── connections.py       # MediaPipe bağlantı haritası
-├── models/              # Model dosyaları (git'e dahil değil)
-├── data_logs/           # CSV çıktıları (git'e dahil değil)
-└── datasets/            # İşlenmiş veri seti (git'e dahil değil)
+├── app.py                          # Flask web sunucusu & SocketIO backend
+├── main_gui.py                     # Masaüstü kontrol paneli (Tkinter GUI)
+├── data_logger.py                  # AU koordinatı kayıt motoru
+├── mesh.py                         # Yüz mesh çizim araçları
+├── yuz_tespit_video.py             # Video izleme modülü
+├── yuz_tespiti_image.py            # Görüntü tabanlı tespit
+├── yuz_filtre.py                   # Veri seti ön-işleme (BlazeFace)
+├── connections.py                  # MediaPipe bağlantı haritası
+├── requirements.txt                # Python bağımlılıkları
+├── Dockerfile                      # Docker imaj tanımı
+├── docker-compose.yml              # Docker Compose yapılandırması
+├── .dockerignore                   # Docker build hariç tutulanlar
+├── .gitignore                      # Git hariç tutulanlar
+├── LICENSE                         # MIT Lisansı
+│
+├── services/                       # Analiz servisleri
+│   ├── mediface_fusion.py          #   Duygu sınıflandırma (TFLite + Priority Smoothing)
+│   └── pain_analyzer.py            #   AU tabanlı ağrı skoru hesaplama
+│
+├── templates/                      # Web arayüz şablonları
+│   └── index.html                  #   Gerçek zamanlı analiz dashboard'u
+│
+├── models/                         # Model dosyaları
+│   ├── face_landmarker.task        #   MediaPipe yüz landmark modeli
+│   ├── blaze_face_short_range.tflite  # BlazeFace yüz tespit modeli
+│   └── mediface_k4.tflite          #   4-sınıflı duygu sınıflandırma modeli
+│
+├── data_logs/                      # CSV çıktıları (git'e dahil değil)
+│
+└── .github/
+    └── workflows/
+        └── deploy.yml              # CI/CD pipeline
+```
 ```
 
 ---
