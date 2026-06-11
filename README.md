@@ -7,12 +7,6 @@
 NOT: Proje ticari amaçlarla kullanılabileceğinden kodlar eklenmedi, asıl kodları private repo da tutuldu.
 ---
 
-<img width="1919" height="1031" alt="resim" src="https://github.com/user-attachments/assets/bf0bbd03-b5fb-4d99-af6a-d667db973488" />
-
-<img width="1141" height="679" alt="resim" src="https://github.com/user-attachments/assets/d3004ec3-91ad-4d67-8498-58d217dc84f0" />
-
----
-
 ## 🚀 Özellikler
 
 | Mod | Açıklama |
